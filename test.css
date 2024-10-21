@@ -5,17 +5,17 @@
 /* General Body and Background Settings */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #dcdcdc;
+    background-color: #9c947a;
     color: #333;
 }
 
 /* Header with Gradient Background */
 .header-gradient {
-    background: linear-gradient(135deg, #6699cc, #ffcc99);
+    background: linear-gradient(135deg, #051a50, #ffcc99);
 }
 
 .gradient-section {
-    background: linear-gradient(135deg, #ffcc99, #6699cc);
+    background: linear-gradient(135deg,  #051a50, #ffcc99);
     border-radius: 10px;
 }
 /* Image Grid Styles */
@@ -81,4 +81,49 @@ h2 {
 .EndZitat{
     display: flex;
     justify-content: center;
+}
+
+
+.body {
+    position: relative;
+    min-height: 50vh;
+    margin: 0;
+    font-family: "Prociono", serif;
+}
+#container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Prociono", serif;
+    font-size: large;
+    
+}
+.text-box {
+    position: absolute;
+    padding: 15px;
+    background-color: rgba(175, 11, 11, 0.8);
+    color: #ffffff;
+    font-size: 1.4em;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+button {
+    padding: 10px;
+    border-radius: 20%;
+    color: #051a50;
+    background-color: #333(188, 189, 222);
+}
+.popUps {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(171, 188, 23, 0.788);
+    margin-top: 20px;
+}
+
+.footer{
+    height: 20px;
 }
