@@ -8,6 +8,92 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="test.css">
+    <style>
+        /* General Body and Background Settings */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #dcdcdc;
+            color: #333;
+        }
+
+        /* Header with Gradient Background */
+        .header-gradient {
+            background: linear-gradient(135deg, #6699cc, #ffcc99);
+        }
+
+        .gradient-section {
+            background: linear-gradient(135deg, #ffcc99, #6699cc);
+            border-radius: 10px;
+        }
+
+        /* Image Grid Styles */
+        .image-grid {
+            gap: 20px;
+        }
+
+        .grid-image {
+            width: 100%;
+            max-width: 250px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Card Styles */
+        .custom-card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Card Image */
+        .card-img-top {
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
+            height: 200px;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h5 {
+            font-family: "Prociono", serif;
+        }
+
+        h1 {
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-weight: 300;
+        }
+
+        /* Spacing */
+        .image-section {
+            padding-bottom: 60px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .grid-image {
+                width: 100%;
+            }
+
+            .custom-card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -19,12 +105,24 @@
         <!-- Section 1: Image Grid -->
         <section class="image-section p-5">
             <h2 class="text-center display-4 mb-5">Wer ist diese wunderbare Frau?</h2>
-            <div class="image-grid d-flex flex-wrap justify-content-center">
-                <img src="media_carusel/Bild1.jpeg" alt="Bild 1" class="grid-image">
-                <img src="media_carusel/Bild2.jpeg" alt="Bild 2" class="grid-image">
-                <img src="media_carusel/Bild3.jpeg" alt="Bild 3" class="grid-image">
-                <img src="media_carusel/Bild5.jpeg" alt="Bild 5" class="grid-image">
-                <img src="media_carusel/Bild7.jpeg" alt="Bild 7" class="grid-image">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <img src="media_carusel/Bild1.jpeg" alt="Bild 1" class="grid-image">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <img src="media_carusel/Bild2.jpeg" alt="Bild 2" class="grid-image">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <img src="media_carusel/Bild3.jpeg" alt="Bild 3" class="grid-image">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <img src="media_carusel/Bild5.jpeg" alt="Bild 5" class="grid-image">
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                        <img src="media_carusel/Bild7.jpeg" alt="Bild 7" class="grid-image">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -35,7 +133,7 @@
 
         <section class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-md-4 mb-4">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card custom-card">
                         <img src="media_cards/kuromi.jpg" class="card-img-top" alt="Kuromi">
                         <div class="card-body">
@@ -45,7 +143,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 mb-4">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card custom-card">
                         <img src="media_cards/erdbeere.jpg" class="card-img-top" alt="Erdbeere">
                         <div class="card-body">
@@ -55,7 +153,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 mb-4">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card custom-card">
                         <img src="media_cards/korean.jpg" class="card-img-top" alt="Korean Chicken">
                         <div class="card-body">
@@ -64,102 +162,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-4">
-                    <div class="card custom-card">
-                        <img src="media_cards/malaysia.jpeg" class="card-img-top" alt="Malaysia">
-                        <div class="card-body">
-                            <h5 class="card-title">Malaysia here we come</h5>
-                            <p class="card-text">Lerne mehr über Malaysia, denn sie möchte dort leben.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card custom-card">
-                        <img src="media_cards/puteri.jpg" class="card-img-top" alt="Puteri">
-                        <div class="card-body">
-                            <h5 class="card-title">Eine echte Prinzessin</h5>
-                            <p class="card-text">Sie ist eine Prinzessin und sollte auch so behandelt werden.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card custom-card">
-                        <img src="media_cards/reisen.jpg" class="card-img-top" alt="Reisen">
-                        <div class="card-body">
-                            <h5 class="card-title">Reise einmal um die Welt</h5>
-                            <p class="card-text">Sie liebt es zu reisen und die Welt zu erkunden.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-4">
-                    <div class="card custom-card">
-                        <img src="media_cards/skydive.jpg" class="card-img-top" alt="Malaysia">
-                        <div class="card-body">
-                            <h5 class="card-title">Es macht Wuiiii im Bauch</h5>
-                            <p class="card-text">Nimm sie mit zu Nervenkitzel-Aktivitäten, wie Bunjee Jumping, Achterbahn und so weiter. Sie liebt Action 🎢</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card custom-card">
-                        <img src="media_cards/museum.jpg" class="card-img-top" alt="Puteri">
-                        <div class="card-body">
-                            <h5 class="card-title">Museen sind ihr Ding</h5>
-                            <p class="card-text">Überraschenderweise liebt sie aber auch Museen. Van Gogh ist ihr Lieblingskünstler 🖼️ </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card custom-card">
-                        <img src="media_cards/reisen.jpg" class="card-img-top" alt="Reisen">
-                        <div class="card-body">
-                            <h5 class="card-title">Finanziell alles geben</h5>
-                            <p class="card-text">Sei nicht geizig mit deinem Geld und zeige ihr, dass du dich finanziell um sie kümmern kannst und willst 💪</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-4">
-                    <div class="card custom-card">
-                        <img src="media_cards/neugierig.jpg" class="card-img-top" alt="Malaysia">
-                        <div class="card-body">
-                            <h5 class="card-title">Neugierig wie eh und je</h5>
-                            <p class="card-text">Sie ist unglaublich neugierig. Wenn du eine Gesichtsregung zu viel machst, musst du ihr erklären, worum es geht. Sie wird sonst unglaublich sauer 🔎</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card custom-card">
-                        <img src="media_cards/umarmen.jpg" class="card-img-top" alt="Puteri">
-                        <div class="card-body">
-                            <h5 class="card-title">Umarmungen sind wichtig</h5>
-                            <p class="card-text">Bei Streit: Nimm sie unbedingt in den Arm. Entferne dich auf keinen Fall, auch wenn du sauer bist 🫰</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card custom-card">
-                        <img src="media_cards/kdrama+.jpg" class="card-img-top" alt="Reisen">
-                        <div class="card-body">
-                            <h5 class="card-title">K-Drama for life</h5>
-                            <p class="card-text">Sie liebt K-Dramas und könnte diese albernen Romanzen ihr ganzes Leben lang anschauen ❤️</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Weitere Cards können hier fortgesetzt werden -->
             </div>
         </section>
+
         <div class="col m-5">
             <div class="endSection">
                 <p class="endtext">
@@ -169,7 +176,6 @@
             <div class="EndZitat ">
                 <p class="zitat">" Glücklich ist der, bei dem Sie ist " - Ich</p>
             </div>
-            
         </div>
     </main>
 
