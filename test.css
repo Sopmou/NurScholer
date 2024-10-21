@@ -20,17 +20,20 @@ body {
 }
 /* Image Grid Styles */
 .image-grid {
-    gap: 20px;
+    gap: 1.25rem;
+    max-width: 100%;
 }
 
 .grid-image {
-    width: 18%;
+    width: calc(20% - 1.25rem);
+    min-width: 200px; /* Stelle sicher, dass die Bilder nicht zu klein werden */
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
+
 .grid-image:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -50,7 +53,7 @@ body {
 .card-img-top {
     border-radius: 15px 15px 0 0;
     object-fit: cover;
-    height: 200px;
+    height: 12.5rem;
 }
 
 /* Typography */
@@ -68,11 +71,11 @@ h2 {
 
 /* Spacing */
 .image-section {
-    padding-bottom: 60px;
+    padding-bottom: 3.75rem;
 }
 
 .image-grid img {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 .endSection{
     display: flex;
@@ -94,14 +97,14 @@ h2 {
     position: relative;
     width: 100%;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1.25;
     font-family: "Prociono", serif;
     font-size: large;
     
 }
 .text-box {
     position: absolute;
-    padding: 15px;
+    padding: 0.9rem;
     background-color: rgba(175, 11, 11, 0.8);
     color: #ffffff;
     font-size: 1.4em;
@@ -111,7 +114,7 @@ h2 {
     transition: opacity 1s;
 }
 button {
-    padding: 10px;
+    padding: 0.6rem;
     border-radius: 20%;
     color: #051a50;
     background-color: #333(188, 189, 222);
